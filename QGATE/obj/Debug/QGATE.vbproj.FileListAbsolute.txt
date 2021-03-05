@@ -1,0 +1,71 @@
+C:\Users\kidakarn_i\source\repos\QGATE\QGATE\bin\Debug\QGATE.exe.config
+C:\Users\kidakarn_i\source\repos\QGATE\QGATE\bin\Debug\QGATE.exe
+C:\Users\kidakarn_i\source\repos\QGATE\QGATE\bin\Debug\QGATE.pdb
+C:\Users\kidakarn_i\source\repos\QGATE\QGATE\bin\Debug\QGATE.xml
+C:\Users\kidakarn_i\source\repos\QGATE\QGATE\bin\Debug\Newtonsoft.Json.dll
+C:\Users\kidakarn_i\source\repos\QGATE\QGATE\obj\Debug\QGATE.vbprojAssemblyReference.cache
+C:\Users\kidakarn_i\source\repos\QGATE\QGATE\obj\Debug\QGATE.Main.resources
+C:\Users\kidakarn_i\source\repos\QGATE\QGATE\obj\Debug\QGATE.Resources.resources
+C:\Users\kidakarn_i\source\repos\QGATE\QGATE\obj\Debug\QGATE.vbproj.GenerateResource.cache
+C:\Users\kidakarn_i\source\repos\QGATE\QGATE\obj\Debug\QGATE.vbproj.CoreCompileInputs.cache
+C:\Users\kidakarn_i\source\repos\QGATE\QGATE\obj\Debug\QGATE.vbproj.CopyComplete
+C:\Users\kidakarn_i\source\repos\QGATE\QGATE\obj\Debug\QGATE.exe
+C:\Users\kidakarn_i\source\repos\QGATE\QGATE\obj\Debug\QGATE.xml
+C:\Users\kidakarn_i\source\repos\QGATE\QGATE\obj\Debug\QGATE.pdb
+C:\Users\kidakarn_i\source\repos\QGATE\QGATE\obj\Debug\QGATE.Select_menu.resources
+C:\Users\kidakarn_i\source\repos\QGATE\QGATE\obj\Debug\QGATE.Start_operation.resources
+C:\Users\kidakarn_i\source\repos\QGATE\QGATE\obj\Debug\QGATE.Information.resources
+C:\Users\kidakarn_i\source\repos\QGATE\QGATE\bin\Debug\System.Resources.Extensions.dll
+C:\Users\kidakarn_i\source\repos\QGATE\QGATE\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\kidakarn_i\source\repos\QGATE\QGATE\bin\Debug\System.Memory.dll
+C:\Users\kidakarn_i\source\repos\QGATE\QGATE\bin\Debug\MessagingToolkit.QRCode.dll
+C:\Users\kidakarn_i\source\repos\QGATE\QGATE\obj\Debug\QGATE.Print.resources
+C:\Users\Chutdet_v\Desktop\QGATE\QGATE\bin\Debug\QGATE.exe.config
+C:\Users\Chutdet_v\Desktop\QGATE\QGATE\bin\Debug\QGATE.exe
+C:\Users\Chutdet_v\Desktop\QGATE\QGATE\bin\Debug\QGATE.pdb
+C:\Users\Chutdet_v\Desktop\QGATE\QGATE\bin\Debug\QGATE.xml
+C:\Users\Chutdet_v\Desktop\QGATE\QGATE\bin\Debug\MessagingToolkit.QRCode.dll
+C:\Users\Chutdet_v\Desktop\QGATE\QGATE\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Chutdet_v\Desktop\QGATE\QGATE\bin\Debug\System.Resources.Extensions.dll
+C:\Users\Chutdet_v\Desktop\QGATE\QGATE\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Chutdet_v\Desktop\QGATE\QGATE\bin\Debug\System.Memory.dll
+C:\Users\Chutdet_v\Desktop\QGATE\QGATE\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Chutdet_v\Desktop\QGATE\QGATE\bin\Debug\System.Buffers.dll
+C:\Users\Chutdet_v\Desktop\QGATE\QGATE\obj\Debug\QGATE.vbprojAssemblyReference.cache
+C:\Users\Chutdet_v\Desktop\QGATE\QGATE\obj\Debug\QGATE.Print.resources
+C:\Users\Chutdet_v\Desktop\QGATE\QGATE\obj\Debug\QGATE.Information.resources
+C:\Users\Chutdet_v\Desktop\QGATE\QGATE\obj\Debug\QGATE.Main.resources
+C:\Users\Chutdet_v\Desktop\QGATE\QGATE\obj\Debug\QGATE.Resources.resources
+C:\Users\Chutdet_v\Desktop\QGATE\QGATE\obj\Debug\QGATE.Start_operation.resources
+C:\Users\Chutdet_v\Desktop\QGATE\QGATE\obj\Debug\QGATE.Select_menu.resources
+C:\Users\Chutdet_v\Desktop\QGATE\QGATE\obj\Debug\QGATE.vbproj.GenerateResource.cache
+C:\Users\Chutdet_v\Desktop\QGATE\QGATE\obj\Debug\QGATE.vbproj.CoreCompileInputs.cache
+C:\Users\Chutdet_v\Desktop\QGATE\QGATE\obj\Debug\QGATE.vbproj.CopyComplete
+C:\Users\Chutdet_v\Desktop\QGATE\QGATE\obj\Debug\QGATE.exe
+C:\Users\Chutdet_v\Desktop\QGATE\QGATE\obj\Debug\QGATE.xml
+C:\Users\Chutdet_v\Desktop\QGATE\QGATE\obj\Debug\QGATE.pdb
+C:\Users\New FA\source\repos\QGATE\QGATE\bin\Debug\QGATE.exe.config
+C:\Users\New FA\source\repos\QGATE\QGATE\bin\Debug\QGATE.exe
+C:\Users\New FA\source\repos\QGATE\QGATE\bin\Debug\QGATE.pdb
+C:\Users\New FA\source\repos\QGATE\QGATE\bin\Debug\QGATE.xml
+C:\Users\New FA\source\repos\QGATE\QGATE\bin\Debug\MessagingToolkit.QRCode.dll
+C:\Users\New FA\source\repos\QGATE\QGATE\bin\Debug\Newtonsoft.Json.dll
+C:\Users\New FA\source\repos\QGATE\QGATE\bin\Debug\System.Resources.Extensions.dll
+C:\Users\New FA\source\repos\QGATE\QGATE\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\New FA\source\repos\QGATE\QGATE\bin\Debug\System.Memory.dll
+C:\Users\New FA\source\repos\QGATE\QGATE\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\New FA\source\repos\QGATE\QGATE\bin\Debug\System.Buffers.dll
+C:\Users\New FA\source\repos\QGATE\QGATE\obj\Debug\QGATE.vbprojAssemblyReference.cache
+C:\Users\New FA\source\repos\QGATE\QGATE\obj\Debug\QGATE.Print.resources
+C:\Users\New FA\source\repos\QGATE\QGATE\obj\Debug\QGATE.Information.resources
+C:\Users\New FA\source\repos\QGATE\QGATE\obj\Debug\QGATE.Main.resources
+C:\Users\New FA\source\repos\QGATE\QGATE\obj\Debug\QGATE.Resources.resources
+C:\Users\New FA\source\repos\QGATE\QGATE\obj\Debug\QGATE.Start_operation.resources
+C:\Users\New FA\source\repos\QGATE\QGATE\obj\Debug\QGATE.Select_menu.resources
+C:\Users\New FA\source\repos\QGATE\QGATE\obj\Debug\QGATE.vbproj.GenerateResource.cache
+C:\Users\New FA\source\repos\QGATE\QGATE\obj\Debug\QGATE.vbproj.CoreCompileInputs.cache
+C:\Users\New FA\source\repos\QGATE\QGATE\obj\Debug\QGATE.vbproj.CopyComplete
+C:\Users\New FA\source\repos\QGATE\QGATE\obj\Debug\QGATE.exe
+C:\Users\New FA\source\repos\QGATE\QGATE\obj\Debug\QGATE.xml
+C:\Users\New FA\source\repos\QGATE\QGATE\obj\Debug\QGATE.pdb
+C:\Users\kidakarn_i\source\repos\QGATE\QGATE\obj\Debug\QGATE.ADD_USER.resources
