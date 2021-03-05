@@ -69,3 +69,16 @@ C:\Users\New FA\source\repos\QGATE\QGATE\obj\Debug\QGATE.exe
 C:\Users\New FA\source\repos\QGATE\QGATE\obj\Debug\QGATE.xml
 C:\Users\New FA\source\repos\QGATE\QGATE\obj\Debug\QGATE.pdb
 C:\Users\kidakarn_i\source\repos\QGATE\QGATE\obj\Debug\QGATE.ADD_USER.resources
+C:\Users\kidakarn_i\Documents\GitHub\QGATE-PH8-\QGATE\obj\Debug\QGATE.vbprojAssemblyReference.cache
+C:\Users\kidakarn_i\Documents\GitHub\QGATE-PH8-\QGATE\obj\Debug\QGATE.ADD_USER.resources
+C:\Users\kidakarn_i\Documents\GitHub\QGATE-PH8-\QGATE\obj\Debug\QGATE.Print.resources
+C:\Users\kidakarn_i\Documents\GitHub\QGATE-PH8-\QGATE\obj\Debug\QGATE.Information.resources
+C:\Users\kidakarn_i\Documents\GitHub\QGATE-PH8-\QGATE\obj\Debug\QGATE.Main.resources
+C:\Users\kidakarn_i\Documents\GitHub\QGATE-PH8-\QGATE\obj\Debug\QGATE.Resources.resources
+C:\Users\kidakarn_i\Documents\GitHub\QGATE-PH8-\QGATE\obj\Debug\QGATE.Start_operation.resources
+C:\Users\kidakarn_i\Documents\GitHub\QGATE-PH8-\QGATE\obj\Debug\QGATE.Select_menu.resources
+C:\Users\kidakarn_i\Documents\GitHub\QGATE-PH8-\QGATE\obj\Debug\QGATE.vbproj.GenerateResource.cache
+C:\Users\kidakarn_i\Documents\GitHub\QGATE-PH8-\QGATE\obj\Debug\QGATE.vbproj.CoreCompileInputs.cache
+C:\Users\kidakarn_i\Documents\GitHub\QGATE-PH8-\QGATE\obj\Debug\QGATE.exe
+C:\Users\kidakarn_i\Documents\GitHub\QGATE-PH8-\QGATE\obj\Debug\QGATE.xml
+C:\Users\kidakarn_i\Documents\GitHub\QGATE-PH8-\QGATE\obj\Debug\QGATE.pdb
