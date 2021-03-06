@@ -66,30 +66,34 @@ Partial Class Information
         Me.TEXTBOX_TOTAL_QTY = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel_FIFO = New System.Windows.Forms.Panel()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.LOT_NO = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.QTY = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Label20 = New System.Windows.Forms.Label()
         Me.SCAN_FG_TAG = New System.Windows.Forms.TextBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel_DEFECT = New System.Windows.Forms.Panel()
         Me.Label21 = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.ListViewItem = New System.Windows.Forms.ListView()
         Me.DEFECT_CODE = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.DEFECT_NAME = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.ListView_NG = New System.Windows.Forms.ListView()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.ListView_NG_ALL = New System.Windows.Forms.ListView()
+        Me.ListView_Good = New System.Windows.Forms.ListView()
         CType(Me.Timer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel_FIFO.SuspendLayout()
-        Me.Panel_DEFECT.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel_DEFECT.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -464,7 +468,7 @@ Partial Class Information
         Me.Button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Button2.Location = New System.Drawing.Point(906, 680)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(251, 108)
+        Me.Button2.Size = New System.Drawing.Size(182, 73)
         Me.Button2.TabIndex = 33
         Me.Button2.Text = "FINISH"
         Me.Button2.UseVisualStyleBackColor = False
@@ -544,6 +548,7 @@ Partial Class Information
         '
         Me.TEXTBOX_TOTAL_QTY.BackColor = System.Drawing.Color.SteelBlue
         Me.TEXTBOX_TOTAL_QTY.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TEXTBOX_TOTAL_QTY.Enabled = False
         Me.TEXTBOX_TOTAL_QTY.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TEXTBOX_TOTAL_QTY.Location = New System.Drawing.Point(183, 21)
         Me.TEXTBOX_TOTAL_QTY.Name = "TEXTBOX_TOTAL_QTY"
@@ -560,7 +565,7 @@ Partial Class Information
         Me.Panel2.Controls.Add(Me.PictureBox1)
         Me.Panel2.Location = New System.Drawing.Point(45, 34)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1167, 714)
+        Me.Panel2.Size = New System.Drawing.Size(1071, 666)
         Me.Panel2.TabIndex = 42
         '
         'Panel_FIFO
@@ -575,6 +580,31 @@ Partial Class Information
         Me.Panel_FIFO.Name = "Panel_FIFO"
         Me.Panel_FIFO.Size = New System.Drawing.Size(1015, 680)
         Me.Panel_FIFO.TabIndex = 44
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.BackgroundImage = Global.QGATE.My.Resources.Resources._16
+        Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox4.Location = New System.Drawing.Point(74, 63)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(805, 49)
+        Me.PictureBox4.TabIndex = 43
+        Me.PictureBox4.TabStop = False
+        '
+        'Button5
+        '
+        Me.Button5.BackColor = System.Drawing.Color.Blue
+        Me.Button5.BackgroundImage = Global.QGATE.My.Resources.Resources._12
+        Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button5.FlatAppearance.BorderSize = 0
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button5.Location = New System.Drawing.Point(732, 532)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(215, 82)
+        Me.Button5.TabIndex = 34
+        Me.Button5.UseVisualStyleBackColor = False
         '
         'ListView1
         '
@@ -621,6 +651,26 @@ Partial Class Information
         Me.SCAN_FG_TAG.Size = New System.Drawing.Size(590, 73)
         Me.SCAN_FG_TAG.TabIndex = 43
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackgroundImage = Global.QGATE.My.Resources.Resources._14
+        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox3.Location = New System.Drawing.Point(57, 358)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(968, 115)
+        Me.PictureBox3.TabIndex = 42
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.QGATE.My.Resources.Resources._15
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(114, 204)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(888, 106)
+        Me.PictureBox1.TabIndex = 40
+        Me.PictureBox1.TabStop = False
+        '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.LightSalmon
@@ -640,7 +690,7 @@ Partial Class Information
         Me.Panel_DEFECT.Controls.Add(Me.ListViewItem)
         Me.Panel_DEFECT.Location = New System.Drawing.Point(87, 38)
         Me.Panel_DEFECT.Name = "Panel_DEFECT"
-        Me.Panel_DEFECT.Size = New System.Drawing.Size(1114, 710)
+        Me.Panel_DEFECT.Size = New System.Drawing.Size(1114, 693)
         Me.Panel_DEFECT.TabIndex = 43
         '
         'Label21
@@ -653,30 +703,6 @@ Partial Class Information
         Me.Label21.Size = New System.Drawing.Size(439, 58)
         Me.Label21.TabIndex = 37
         Me.Label21.Text = "SELECT NG CODE"
-        '
-        'ListViewItem
-        '
-        Me.ListViewItem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ListViewItem.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.DEFECT_CODE, Me.DEFECT_NAME})
-        Me.ListViewItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ListViewItem.FullRowSelect = True
-        Me.ListViewItem.HideSelection = False
-        Me.ListViewItem.Location = New System.Drawing.Point(133, 73)
-        Me.ListViewItem.Name = "ListViewItem"
-        Me.ListViewItem.Size = New System.Drawing.Size(840, 496)
-        Me.ListViewItem.TabIndex = 1
-        Me.ListViewItem.UseCompatibleStateImageBehavior = False
-        Me.ListViewItem.View = System.Windows.Forms.View.Details
-        '
-        'DEFECT_CODE
-        '
-        Me.DEFECT_CODE.Text = "DEFECT_CODE"
-        Me.DEFECT_CODE.Width = 414
-        '
-        'DEFECT_NAME
-        '
-        Me.DEFECT_NAME.Text = "DEFECT_NAME"
-        Me.DEFECT_NAME.Width = 400
         '
         'Button3
         '
@@ -707,50 +733,72 @@ Partial Class Information
         Me.Button4.TabIndex = 34
         Me.Button4.UseVisualStyleBackColor = False
         '
-        'PictureBox4
+        'ListViewItem
         '
-        Me.PictureBox4.BackgroundImage = Global.QGATE.My.Resources.Resources._16
-        Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox4.Location = New System.Drawing.Point(74, 63)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(805, 49)
-        Me.PictureBox4.TabIndex = 43
-        Me.PictureBox4.TabStop = False
+        Me.ListViewItem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ListViewItem.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.DEFECT_CODE, Me.DEFECT_NAME})
+        Me.ListViewItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListViewItem.FullRowSelect = True
+        Me.ListViewItem.HideSelection = False
+        Me.ListViewItem.Location = New System.Drawing.Point(133, 73)
+        Me.ListViewItem.Name = "ListViewItem"
+        Me.ListViewItem.Size = New System.Drawing.Size(840, 496)
+        Me.ListViewItem.TabIndex = 1
+        Me.ListViewItem.UseCompatibleStateImageBehavior = False
+        Me.ListViewItem.View = System.Windows.Forms.View.Details
         '
-        'Button5
+        'DEFECT_CODE
         '
-        Me.Button5.BackColor = System.Drawing.Color.Blue
-        Me.Button5.BackgroundImage = Global.QGATE.My.Resources.Resources._12
-        Me.Button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button5.FlatAppearance.BorderSize = 0
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button5.Location = New System.Drawing.Point(732, 532)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(215, 82)
-        Me.Button5.TabIndex = 34
-        Me.Button5.UseVisualStyleBackColor = False
+        Me.DEFECT_CODE.Text = "CD"
+        Me.DEFECT_CODE.Width = 187
         '
-        'PictureBox3
+        'DEFECT_NAME
         '
-        Me.PictureBox3.BackgroundImage = Global.QGATE.My.Resources.Resources._14
-        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox3.Location = New System.Drawing.Point(57, 358)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(968, 115)
-        Me.PictureBox3.TabIndex = 42
-        Me.PictureBox3.TabStop = False
+        Me.DEFECT_NAME.Text = "DETAIL"
+        Me.DEFECT_NAME.Width = 705
         '
-        'PictureBox1
+        'ListView_NG
         '
-        Me.PictureBox1.BackgroundImage = Global.QGATE.My.Resources.Resources._15
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(114, 204)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(888, 106)
-        Me.PictureBox1.TabIndex = 40
-        Me.PictureBox1.TabStop = False
+        Me.ListView_NG.HideSelection = False
+        Me.ListView_NG.Location = New System.Drawing.Point(935, 8)
+        Me.ListView_NG.Name = "ListView_NG"
+        Me.ListView_NG.Size = New System.Drawing.Size(52, 23)
+        Me.ListView_NG.TabIndex = 44
+        Me.ListView_NG.UseCompatibleStateImageBehavior = False
+        '
+        'Button6
+        '
+        Me.Button6.BackColor = System.Drawing.Color.Red
+        Me.Button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSeaGreen
+        Me.Button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button6.Location = New System.Drawing.Point(1113, 737)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(155, 60)
+        Me.Button6.TabIndex = 45
+        Me.Button6.Text = "END"
+        Me.Button6.UseVisualStyleBackColor = False
+        '
+        'ListView_NG_ALL
+        '
+        Me.ListView_NG_ALL.HideSelection = False
+        Me.ListView_NG_ALL.Location = New System.Drawing.Point(1011, 8)
+        Me.ListView_NG_ALL.Name = "ListView_NG_ALL"
+        Me.ListView_NG_ALL.Size = New System.Drawing.Size(58, 20)
+        Me.ListView_NG_ALL.TabIndex = 46
+        Me.ListView_NG_ALL.UseCompatibleStateImageBehavior = False
+        '
+        'ListView_Good
+        '
+        Me.ListView_Good.HideSelection = False
+        Me.ListView_Good.Location = New System.Drawing.Point(1099, 8)
+        Me.ListView_Good.Name = "ListView_Good"
+        Me.ListView_Good.Size = New System.Drawing.Size(58, 20)
+        Me.ListView_Good.TabIndex = 47
+        Me.ListView_Good.UseCompatibleStateImageBehavior = False
         '
         'Information
         '
@@ -758,6 +806,10 @@ Partial Class Information
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1280, 800)
+        Me.Controls.Add(Me.ListView_Good)
+        Me.Controls.Add(Me.ListView_NG_ALL)
+        Me.Controls.Add(Me.Button6)
+        Me.Controls.Add(Me.ListView_NG)
         Me.Controls.Add(Me.Panel_DEFECT)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel3)
@@ -811,11 +863,11 @@ Partial Class Information
         Me.Panel2.PerformLayout()
         Me.Panel_FIFO.ResumeLayout(False)
         Me.Panel_FIFO.PerformLayout()
-        Me.Panel_DEFECT.ResumeLayout(False)
-        Me.Panel_DEFECT.PerformLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel_DEFECT.ResumeLayout(False)
+        Me.Panel_DEFECT.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -858,7 +910,6 @@ Partial Class Information
     Friend WithEvents LB_HIDE_ID_REF_FA As Label
     Friend WithEvents Timer1 As Timers.Timer
     Friend WithEvents TEST As Label
-    Friend WithEvents LB_BOX_NG As Label
     Friend WithEvents LB_LOT As Label
     Friend WithEvents LB6 As Label
     Friend WithEvents Label18 As Label
@@ -882,4 +933,9 @@ Partial Class Information
     Friend WithEvents LOT_NO As ColumnHeader
     Friend WithEvents QTY As ColumnHeader
     Friend WithEvents Label20 As Label
+    Friend WithEvents ListView_NG As ListView
+    Friend WithEvents Button6 As Button
+    Friend WithEvents LB_BOX_NG As Label
+    Friend WithEvents ListView_NG_ALL As ListView
+    Friend WithEvents ListView_Good As ListView
 End Class

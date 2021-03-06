@@ -1,5 +1,4 @@
-﻿
-Public Class Print
+﻿Public Class Print_NG
     Private part_no As String = "NO_DATA"
     Private PART_NAME As String = "NO_DATA"
     Private Model As String = "NO_DATA"
@@ -13,37 +12,24 @@ Public Class Print
     Private NEW_QR As String = "NO_DATA"
     Private box_seq As String = "NO_DATA"
     Private new_gen_qr As String = "NO_DATA"
-    Private QR_PRODUCT As String = "NO_DATA"
-    Public Sub Set_parameter_print(LB_PART_NO As String, LB_PART_NAME As String, LB_MODEL As String, LB_LOT As String, LB_COUNTBOX As String, LB_SNP As String, LB_Hide_QR_FA_SCAN As String, max_box As String, QR_PRODUCT_SCAN As String, default_box As Integer, COUNT_TEXTBOX As String)
+    Private QR_PRODUCT As String = ""
+    Private BOX_SEQ_NG As String = "NO_DATA"
+    Private default_NG As String = "1000"
+    Public Sub Set_parameter_print(LB_PART_NO As String, LB_PART_NAME As String, LB_MODEL As String, LB_LOT As String, LB_COUNTBOX As String, LB_SNP As String, LB_Hide_QR_FA_SCAN As String, max_box As String, QR_PRODUCT_SCAN As String)
         part_no = LB_PART_NO
         PART_NAME = LB_PART_NAME
         Model = LB_MODEL
         LOT_NO = LB_LOT
-        If LB_COUNTBOX > default_box Then
-            BOX_NO = CDbl(Val(LB_COUNTBOX)) - 1
-        Else
-            BOX_NO = CDbl(Val(LB_COUNTBOX))
-        End If
+        BOX_NO = LB_COUNTBOX
         M_BOX = max_box
         SHIFT = "NO_DATA"
-        If COUNT_TEXTBOX = "0" Then
-            QTY = LB_SNP
-        Else
-            QTY = COUNT_TEXTBOX
-        End If
+        QTY = LB_SNP
         LINE = LB_Hide_QR_FA_SCAN.Substring(2, 6)
         CHECK_DATE = "NO_DATA"
         NEW_QR = LB_Hide_QR_FA_SCAN.Substring(0, 100)
-        If BOX_NO <= 9 Then
-            box_seq = "00" & BOX_NO
-        ElseIf BOX_NO <= 99 Then
-            box_seq = "0" & BOX_NO
-        Else
-            box_seq = BOX_NO
-        End If
-        new_gen_qr = NEW_QR & box_seq
+        BOX_SEQ_NG = CDbl(Val(default_NG)) - CDbl(Val(LB_COUNTBOX))
+        new_gen_qr = NEW_QR & BOX_SEQ_NG
         QR_PRODUCT = QR_PRODUCT_SCAN
-
         PrintDocument1.Print()
     End Sub
 
@@ -138,11 +124,11 @@ Public Class Print
         qrcode.QRCodeScale = 10
         Dim bitmap_qr_box As Bitmap = qrcode.Encode(new_gen_qr)
         Dim bitmap_qr_product As Bitmap = qrcode.Encode(QR_PRODUCT)
-        e.Graphics.DrawImage(bitmap_qr_box, 532, 20, 115, 115) 'TOP
+        e.Graphics.DrawString("NG", Label13.Font, Brushes.Black, 510, 20)
+        ' e.Graphics.DrawImage(bitmap_qr_box, 532, 20, 115, 115) 'TOP
         e.Graphics.DrawImage(bitmap_qr_box, 0, 210, 75, 75) 'left
         e.Graphics.DrawImage(bitmap_qr_product, 570, 220, 70, 70) 'button right
     End Sub
-    'Index was outside the bounds of the array.'
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
