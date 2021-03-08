@@ -21,8 +21,6 @@ Public Class Information
         SCAN_PRODUCT.Focus()
         LB_BOX_NG.Text = 1
         LB_HIDE_ID_REF_FA.Visible = False
-        TEXTBOX_TOTAL_QTY.Visible = False
-        TEST.Visible = False
         LB_Hide_QR_FA_SCAN.Visible = False
         TEXTBOX_COUNTER_PRODUCT.Enabled = False
         TEXTBOX_COUNTER_PRODUCT_NG.Enabled = False
@@ -95,7 +93,6 @@ Public Class Information
                     LB_RANK_PRODUCT.Text = arr_prd(3)
                 Else
                     P_SCAN_PRODUCT = SCAN_PRODUCT.Text
-                    LB_RANK_PRODUCT.Text = "A"
                 End If
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -172,7 +169,7 @@ End Sub
                 End If
                 SCAN_PRODUCT.Text = ""
                 SCAN_PRODUCT.Focus()
-                'check_box()
+                check_box()
         End Select
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -460,11 +457,14 @@ NEXT_NG:
 >>>>>>> parent of caa5b6a (update)
                 count_product -= 1
                 Dim result_insert = api.Load_data("http://192.168.161.102/QGATE/QGATE_Insert_data/INSERT_QR_SCAN_DETAIL?REF_FA=" & LB_HIDE_ID_REF_FA.Text & "&QR_PROM=" & LOG_QR_PROD(CDbl(Val(g_index_ng))) & "&USER_ID=" & Main.P_user_id & "&COUNT_QTY=" & TEXTBOX_COUNTER_PRODUCT.Text & "&BOX_NO=" & LB_COUNTBOX.Text & "&INSPECTION_TIME=" & INSPECTION_TIME2 & "&STATUS=NG" & "&DEFECT_ID=" & DEFECT_ID(g_index) & "&RANK_P=")
+<<<<<<< HEAD
                 x = New ListViewItem(CType(LOG_QR_PROD(CDbl(Val(g_index_ng))), String))
                 ListView_NG.Items.Add(x)
                 x = New ListViewItem(CType(LOG_QR_PROD(CDbl(Val(g_index_ng))), String))
                 ListView_NG_ALL.Items.Add(x)
                 ListView_Good.Items.RemoveAt(g_index_ng)
+=======
+>>>>>>> parent of 8d9adf4 (TESTTTTTT)
                 If g_index_ng = 0 And LB_COUNTBOX.Text >= "1" Then
                     LOG_QR_PROD = New ArrayList()
                 End If
@@ -598,6 +598,7 @@ NEXT_NG:
     Private Sub SCAN_FG_TAG_KeyDown_1(sender As Object, e As KeyEventArgs)
 
     End Sub
+<<<<<<< HEAD
     Private Sub Button6_Click_1(sender As Object, e As EventArgs) Handles Button6.Click
 <<<<<<< HEAD
         Dim QR_PRODUCT As String = ""
@@ -654,4 +655,7 @@ NEXT_NG:
 >>>>>>> parent of 43d3d74 (UPDATED)
 =======
 >>>>>>> parent of caa5b6a (update)
+=======
+
+>>>>>>> parent of 8d9adf4 (TESTTTTTT)
 End Class
