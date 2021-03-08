@@ -15,6 +15,7 @@
     Private QR_PRODUCT As String = ""
     Private BOX_SEQ_NG As String = "NO_DATA"
     Private default_NG As String = "1000"
+    ''tests
     Public Sub Set_parameter_print(LB_PART_NO As String, LB_PART_NAME As String, LB_MODEL As String, LB_LOT As String, LB_COUNTBOX As String, LB_SNP As String, LB_Hide_QR_FA_SCAN As String, max_box As String, QR_PRODUCT_SCAN As String)
         part_no = LB_PART_NO
         PART_NAME = LB_PART_NAME
