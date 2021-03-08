@@ -170,7 +170,7 @@ alert_ng:
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim QR_PRODUCT As String = ""
+        Dim QR_PRODUCT As String = "REF_ID "
         Dim api = New api()
         If ListView_Good.Items.Count > 0 Then
             Dim x As Integer
@@ -278,7 +278,7 @@ NEXT_NG:
         Button2.Visible = False
         time_count = 0
         TEST.Text = "0"
-        Dim QR_PRODUCT_NG As String = ""
+        Dim QR_PRODUCT_NG As String = "REF_ID "
         If next_stock_ng = CDbl(Val(TEXTBOX_COUNTER_PRODUCT_NG.Text)) Then
             If ListView_NG.Items.Count > 0 Then
                 Dim x As Integer
@@ -396,8 +396,8 @@ NEXT_NG:
 
     End Sub
     Private Sub Button6_Click_1(sender As Object, e As EventArgs) Handles Button6.Click
-        Dim QR_PRODUCT As String = ""
-        Dim QR_PRODUCT_NG As String = ""
+        Dim QR_PRODUCT As String = "REF_ID "
+        Dim QR_PRODUCT_NG As String = "REF_ID "
         Dim api = New api()
         If ListView_Good.Items.Count > 0 Then
             Dim x As Integer
