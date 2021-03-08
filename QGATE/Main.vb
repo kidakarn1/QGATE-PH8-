@@ -26,8 +26,6 @@ Public Class Main
 
                 Dim result_api_checkper = api.Load_data("http://192.168.161.102/QGATE/Check_permission/USER_LOAD_DATA?USER_ID=" & P_user_id)
                 If result_api_checkper = "1" Then
-                    user_id.Text = ""
-                    user_id.Focus()
                     Dim Select_menu As Select_menu = New Select_menu()
                     Dim result_per = api.Load_data("http://192.168.161.102/QGATE/Check_permission/USER_CHECK_PERMISSION?USER_ID=" & P_user_id)
                     Module1.set_permission(result_per)
@@ -37,8 +35,6 @@ Public Class Main
                 Else
 alert_msg:
                     MsgBox("รหัสผ่านผิด")
-                    user_id.Text = ""
-                    user_id.Focus()
                 End If
         End Select
     End Sub

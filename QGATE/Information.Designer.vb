@@ -83,10 +83,6 @@ Partial Class Information
         Me.ListViewItem = New System.Windows.Forms.ListView()
         Me.DEFECT_CODE = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.DEFECT_NAME = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ListView_NG = New System.Windows.Forms.ListView()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.ListView_NG_ALL = New System.Windows.Forms.ListView()
-        Me.ListView_Good = New System.Windows.Forms.ListView()
         CType(Me.Timer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel_FIFO.SuspendLayout()
@@ -468,7 +464,7 @@ Partial Class Information
         Me.Button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Button2.Location = New System.Drawing.Point(906, 680)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(182, 73)
+        Me.Button2.Size = New System.Drawing.Size(251, 108)
         Me.Button2.TabIndex = 33
         Me.Button2.Text = "FINISH"
         Me.Button2.UseVisualStyleBackColor = False
@@ -548,7 +544,6 @@ Partial Class Information
         '
         Me.TEXTBOX_TOTAL_QTY.BackColor = System.Drawing.Color.SteelBlue
         Me.TEXTBOX_TOTAL_QTY.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TEXTBOX_TOTAL_QTY.Enabled = False
         Me.TEXTBOX_TOTAL_QTY.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TEXTBOX_TOTAL_QTY.Location = New System.Drawing.Point(183, 21)
         Me.TEXTBOX_TOTAL_QTY.Name = "TEXTBOX_TOTAL_QTY"
@@ -565,7 +560,7 @@ Partial Class Information
         Me.Panel2.Controls.Add(Me.PictureBox1)
         Me.Panel2.Location = New System.Drawing.Point(45, 34)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1071, 666)
+        Me.Panel2.Size = New System.Drawing.Size(1167, 714)
         Me.Panel2.TabIndex = 42
         '
         'Panel_FIFO
@@ -690,7 +685,7 @@ Partial Class Information
         Me.Panel_DEFECT.Controls.Add(Me.ListViewItem)
         Me.Panel_DEFECT.Location = New System.Drawing.Point(87, 38)
         Me.Panel_DEFECT.Name = "Panel_DEFECT"
-        Me.Panel_DEFECT.Size = New System.Drawing.Size(1114, 693)
+        Me.Panel_DEFECT.Size = New System.Drawing.Size(1114, 710)
         Me.Panel_DEFECT.TabIndex = 43
         '
         'Label21
@@ -749,56 +744,13 @@ Partial Class Information
         '
         'DEFECT_CODE
         '
-        Me.DEFECT_CODE.Text = "CD"
-        Me.DEFECT_CODE.Width = 187
+        Me.DEFECT_CODE.Text = "DEFECT_CODE"
+        Me.DEFECT_CODE.Width = 414
         '
         'DEFECT_NAME
         '
-        Me.DEFECT_NAME.Text = "DETAIL"
-        Me.DEFECT_NAME.Width = 705
-        '
-        'ListView_NG
-        '
-        Me.ListView_NG.HideSelection = False
-        Me.ListView_NG.Location = New System.Drawing.Point(935, 8)
-        Me.ListView_NG.Name = "ListView_NG"
-        Me.ListView_NG.Size = New System.Drawing.Size(52, 23)
-        Me.ListView_NG.TabIndex = 44
-        Me.ListView_NG.UseCompatibleStateImageBehavior = False
-        '
-        'Button6
-        '
-        Me.Button6.BackColor = System.Drawing.Color.Red
-        Me.Button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSeaGreen
-        Me.Button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button6.Location = New System.Drawing.Point(1113, 737)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(155, 60)
-        Me.Button6.TabIndex = 45
-        Me.Button6.Text = "END"
-        Me.Button6.UseVisualStyleBackColor = False
-        '
-        'ListView_NG_ALL
-        '
-        Me.ListView_NG_ALL.HideSelection = False
-        Me.ListView_NG_ALL.Location = New System.Drawing.Point(1011, 8)
-        Me.ListView_NG_ALL.Name = "ListView_NG_ALL"
-        Me.ListView_NG_ALL.Size = New System.Drawing.Size(58, 20)
-        Me.ListView_NG_ALL.TabIndex = 46
-        Me.ListView_NG_ALL.UseCompatibleStateImageBehavior = False
-        '
-        'ListView_Good
-        '
-        Me.ListView_Good.HideSelection = False
-        Me.ListView_Good.Location = New System.Drawing.Point(1099, 8)
-        Me.ListView_Good.Name = "ListView_Good"
-        Me.ListView_Good.Size = New System.Drawing.Size(58, 20)
-        Me.ListView_Good.TabIndex = 47
-        Me.ListView_Good.UseCompatibleStateImageBehavior = False
+        Me.DEFECT_NAME.Text = "DEFECT_NAME"
+        Me.DEFECT_NAME.Width = 400
         '
         'Information
         '
@@ -806,10 +758,6 @@ Partial Class Information
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer), CType(CType(25, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1280, 800)
-        Me.Controls.Add(Me.ListView_Good)
-        Me.Controls.Add(Me.ListView_NG_ALL)
-        Me.Controls.Add(Me.Button6)
-        Me.Controls.Add(Me.ListView_NG)
         Me.Controls.Add(Me.Panel_DEFECT)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel3)
@@ -910,6 +858,7 @@ Partial Class Information
     Friend WithEvents LB_HIDE_ID_REF_FA As Label
     Friend WithEvents Timer1 As Timers.Timer
     Friend WithEvents TEST As Label
+    Friend WithEvents LB_BOX_NG As Label
     Friend WithEvents LB_LOT As Label
     Friend WithEvents LB6 As Label
     Friend WithEvents Label18 As Label
@@ -933,9 +882,8 @@ Partial Class Information
     Friend WithEvents LOT_NO As ColumnHeader
     Friend WithEvents QTY As ColumnHeader
     Friend WithEvents Label20 As Label
-    Friend WithEvents ListView_NG As ListView
-    Friend WithEvents Button6 As Button
-    Friend WithEvents LB_BOX_NG As Label
-    Friend WithEvents ListView_NG_ALL As ListView
-    Friend WithEvents ListView_Good As ListView
+
+    Private Sub Information_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

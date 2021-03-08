@@ -13,24 +13,16 @@ Public Class Print
     Private NEW_QR As String = "NO_DATA"
     Private box_seq As String = "NO_DATA"
     Private new_gen_qr As String = "NO_DATA"
-    Private QR_PRODUCT As String = "NO_DATA"
-    Public Sub Set_parameter_print(LB_PART_NO As String, LB_PART_NAME As String, LB_MODEL As String, LB_LOT As String, LB_COUNTBOX As String, LB_SNP As String, LB_Hide_QR_FA_SCAN As String, max_box As String, QR_PRODUCT_SCAN As String, default_box As Integer, COUNT_TEXTBOX As String)
+    Private QR_PRODUCT As String = ""
+    Public Sub Set_parameter_print(LB_PART_NO As String, LB_PART_NAME As String, LB_MODEL As String, LB_LOT As String, LB_COUNTBOX As String, LB_SNP As String, LB_Hide_QR_FA_SCAN As String, max_box As String, QR_PRODUCT_SCAN As String)
         part_no = LB_PART_NO
         PART_NAME = LB_PART_NAME
         Model = LB_MODEL
         LOT_NO = LB_LOT
-        If LB_COUNTBOX > default_box Then
-            BOX_NO = CDbl(Val(LB_COUNTBOX)) - 1
-        Else
-            BOX_NO = CDbl(Val(LB_COUNTBOX))
-        End If
+        BOX_NO = CDbl(Val(LB_COUNTBOX)) - 1
         M_BOX = max_box
         SHIFT = "NO_DATA"
-        If COUNT_TEXTBOX = "0" Then
-            QTY = LB_SNP
-        Else
-            QTY = COUNT_TEXTBOX
-        End If
+        QTY = LB_SNP
         LINE = LB_Hide_QR_FA_SCAN.Substring(2, 6)
         CHECK_DATE = "NO_DATA"
         NEW_QR = LB_Hide_QR_FA_SCAN.Substring(0, 100)
@@ -43,7 +35,6 @@ Public Class Print
         End If
         new_gen_qr = NEW_QR & box_seq
         QR_PRODUCT = QR_PRODUCT_SCAN
-
         PrintDocument1.Print()
     End Sub
 
@@ -107,7 +98,7 @@ Public Class Print
         e.Graphics.DrawString("MODEL", Label1.Font, Brushes.Black, 90, 150)
         e.Graphics.DrawString(Model, Label8.Font, Brushes.Black, 102, 165)
         e.Graphics.DrawString("QTY", Label8.Font, Brushes.Black, 425, 100)
-        e.Graphics.DrawString(QTY, Label12.Font, Brushes.Black, 420, 130)
+        e.Graphics.DrawString(QTY, Label11.Font, Brushes.Black, 435, 150)
 
         e.Graphics.DrawString("LOT NO.", Label1.Font, Brushes.Black, 90, 200)
         e.Graphics.DrawString(LOT_NO, Label8.Font, Brushes.Black, 100, 220)
@@ -142,7 +133,6 @@ Public Class Print
         e.Graphics.DrawImage(bitmap_qr_box, 0, 210, 75, 75) 'left
         e.Graphics.DrawImage(bitmap_qr_product, 570, 220, 70, 70) 'button right
     End Sub
-    'Index was outside the bounds of the array.'
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 

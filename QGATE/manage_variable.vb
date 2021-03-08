@@ -3,7 +3,6 @@
     Dim V_user_id = "NO_DATA"
     Dim V_ref_id = "NO_DATA"
     Dim V_QR_PROM = "NO_DATA"
-    Public VBOX_NG As Integer = 999
     Public Sub set_permission(permission As String)
         V_permission = permission
     End Sub
