@@ -69,10 +69,6 @@ C:\Users\New FA\source\repos\QGATE\QGATE\obj\Debug\QGATE.exe
 C:\Users\New FA\source\repos\QGATE\QGATE\obj\Debug\QGATE.xml
 C:\Users\New FA\source\repos\QGATE\QGATE\obj\Debug\QGATE.pdb
 C:\Users\kidakarn_i\source\repos\QGATE\QGATE\obj\Debug\QGATE.ADD_USER.resources
-<<<<<<< HEAD
-=======
-C:\Users\kidakarn_i\Documents\GitHub\QGATE-PH8-\QGATE\obj\Debug\QGATE.vbprojAssemblyReference.cache
->>>>>>> parent of b4c84fd (UPDATE)
 C:\Users\kidakarn_i\Documents\GitHub\QGATE-PH8-\QGATE\obj\Debug\QGATE.ADD_USER.resources
 C:\Users\kidakarn_i\Documents\GitHub\QGATE-PH8-\QGATE\obj\Debug\QGATE.Print.resources
 C:\Users\kidakarn_i\Documents\GitHub\QGATE-PH8-\QGATE\obj\Debug\QGATE.Information.resources
@@ -82,8 +78,18 @@ C:\Users\kidakarn_i\Documents\GitHub\QGATE-PH8-\QGATE\obj\Debug\QGATE.Start_oper
 C:\Users\kidakarn_i\Documents\GitHub\QGATE-PH8-\QGATE\obj\Debug\QGATE.Select_menu.resources
 C:\Users\kidakarn_i\Documents\GitHub\QGATE-PH8-\QGATE\obj\Debug\QGATE.vbproj.GenerateResource.cache
 C:\Users\kidakarn_i\Documents\GitHub\QGATE-PH8-\QGATE\obj\Debug\QGATE.vbproj.CoreCompileInputs.cache
+C:\Users\kidakarn_i\Documents\GitHub\QGATE-PH8-\QGATE\bin\Debug\QGATE.exe.config
+C:\Users\kidakarn_i\Documents\GitHub\QGATE-PH8-\QGATE\bin\Debug\QGATE.exe
+C:\Users\kidakarn_i\Documents\GitHub\QGATE-PH8-\QGATE\bin\Debug\QGATE.pdb
+C:\Users\kidakarn_i\Documents\GitHub\QGATE-PH8-\QGATE\bin\Debug\QGATE.xml
+C:\Users\kidakarn_i\Documents\GitHub\QGATE-PH8-\QGATE\bin\Debug\MessagingToolkit.QRCode.dll
+C:\Users\kidakarn_i\Documents\GitHub\QGATE-PH8-\QGATE\bin\Debug\Newtonsoft.Json.dll
+C:\Users\kidakarn_i\Documents\GitHub\QGATE-PH8-\QGATE\bin\Debug\System.Resources.Extensions.dll
+C:\Users\kidakarn_i\Documents\GitHub\QGATE-PH8-\QGATE\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\kidakarn_i\Documents\GitHub\QGATE-PH8-\QGATE\bin\Debug\System.Memory.dll
+C:\Users\kidakarn_i\Documents\GitHub\QGATE-PH8-\QGATE\obj\Debug\QGATE.vbproj.CopyComplete
 C:\Users\kidakarn_i\Documents\GitHub\QGATE-PH8-\QGATE\obj\Debug\QGATE.exe
 C:\Users\kidakarn_i\Documents\GitHub\QGATE-PH8-\QGATE\obj\Debug\QGATE.xml
 C:\Users\kidakarn_i\Documents\GitHub\QGATE-PH8-\QGATE\obj\Debug\QGATE.pdb
+C:\Users\kidakarn_i\Documents\GitHub\QGATE-PH8-\QGATE\obj\Debug\QGATE.vbprojAssemblyReference.cache
 C:\Users\kidakarn_i\Documents\GitHub\QGATE-PH8-\QGATE\obj\Debug\QGATE.Print_NG.resources
->>>>>>> parent of 8d9adf4 (TESTTTTTT)
