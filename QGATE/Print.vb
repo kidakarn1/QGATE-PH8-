@@ -147,8 +147,4 @@ Public Class Print
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
-
-    Friend Shared Sub Set_parameter_print(text1 As String, text2 As String, text3 As String, text4 As String, text5 As String, text6 As String, text7 As String, text8 As String, qR_PRODUCT As String, text9 As String)
-        Throw New NotImplementedException()
-    End Sub
 End Class
