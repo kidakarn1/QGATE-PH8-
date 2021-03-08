@@ -256,17 +256,20 @@ NEXT_NG:
             LOG_QR_PROD = New ArrayList()
             Return
         End If
-        If g_index_ng >= 0 And LB_COUNTBOX.Text >= "1" Then
+        MsgBox("TEST OOOK")
+        If ListView_Good.Items.Count >= 0 And LB_COUNTBOX.Text >= "1" Then
+            MsgBox("TEST DATA")
             If check_index_ng <> "ZERO" Then
-                LB_QR_PRODUCT_NG.Text = LOG_QR_PROD(CDbl(Val(g_index_ng)))
+                MsgBox("TEST DATA===>")
+                LB_QR_PRODUCT_NG.Text = LOG_QR_PROD(CDbl(Val(ListView_Good.Items.Count - 1)))
                 count_product -= 1
-                Dim result_insert = api.Load_data("http://192.168.161.102/QGATE/QGATE_Insert_data/INSERT_QR_SCAN_DETAIL?REF_FA=" & LB_HIDE_ID_REF_FA.Text & "&QR_PROM=" & LOG_QR_PROD(CDbl(Val(g_index_ng))) & "&USER_ID=" & Main.P_user_id & "&COUNT_QTY=" & TEXTBOX_COUNTER_PRODUCT.Text & "&BOX_NO=" & LB_COUNTBOX.Text & "&INSPECTION_TIME=" & INSPECTION_TIME2 & "&STATUS=NG" & "&DEFECT_ID=" & DEFECT_ID(g_index) & "&RANK_P=")
-                x = New ListViewItem(CType(LOG_QR_PROD(CDbl(Val(g_index_ng))), String))
+                Dim result_insert = api.Load_data("http://192.168.161.102/QGATE/QGATE_Insert_data/INSERT_QR_SCAN_DETAIL?REF_FA=" & LB_HIDE_ID_REF_FA.Text & "&QR_PROM=" & LOG_QR_PROD(CDbl(Val(ListView_Good.Items.Count - 1))) & "&USER_ID=" & Main.P_user_id & "&COUNT_QTY=" & TEXTBOX_COUNTER_PRODUCT.Text & "&BOX_NO=" & LB_COUNTBOX.Text & "&INSPECTION_TIME=" & INSPECTION_TIME2 & "&STATUS=NG" & "&DEFECT_ID=" & DEFECT_ID(g_index) & "&RANK_P=")
+                x = New ListViewItem(CType(LOG_QR_PROD(CDbl(Val(ListView_Good.Items.Count - 1))), String))
                 ListView_NG.Items.Add(x)
-                x = New ListViewItem(CType(LOG_QR_PROD(CDbl(Val(g_index_ng))), String))
+                x = New ListViewItem(CType(LOG_QR_PROD(CDbl(Val(ListView_Good.Items.Count - 1))), String))
                 ListView_NG_ALL.Items.Add(x)
-                ListView_Good.Items.RemoveAt(g_index_ng)
-                If g_index_ng = 0 And LB_COUNTBOX.Text >= "1" Then
+                ListView_Good.Items.RemoveAt(ListView_Good.Items.Count - 1)
+                If ListView_Good.Items.Count = 0 And LB_COUNTBOX.Text >= "1" Then
                     LOG_QR_PROD = New ArrayList()
                 End If
             Else
@@ -296,7 +299,7 @@ NEXT_NG:
                 ListView_NG.Clear()
             End If
             Print_NG.Set_parameter_print(LB_PART_NO.Text, LB_PART_NAME.Text, LB_MODEL.Text, LB_LOT.Text, LB_BOX_NG.Text, TEXTBOX_COUNTER_PRODUCT_NG.Text, LB_Hide_QR_FA_SCAN.Text, LB_MAXBOX.Text, QR_PRODUCT_NG)
-            '            next_stock_ng = next_stock_ng + CDbl(Val(LB_SNP.Text))
+            next_stock_ng = next_stock_ng + CDbl(Val(LB_SNP.Text))
             ListView_NG.Clear()
         End If
     End Sub
