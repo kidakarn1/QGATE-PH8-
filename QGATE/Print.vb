@@ -105,7 +105,7 @@ Public Class Print
         e.Graphics.DrawString("PART NAME", Label1.Font, Brushes.Black, 90, 100)
         e.Graphics.DrawString(PART_NAME, Label1.Font, Brushes.Black, 102, 120)
         e.Graphics.DrawString("MODEL", Label1.Font, Brushes.Black, 90, 150)
-        e.Graphics.DrawString(Model, Label8.Font, Brushes.Black, 102, 165)
+        e.Graphics.DrawString(Model, Label1.Font, Brushes.Black, 102, 165)
         e.Graphics.DrawString("QTY", Label8.Font, Brushes.Black, 425, 100)
         e.Graphics.DrawString(QTY, Label12.Font, Brushes.Black, 420, 130)
 

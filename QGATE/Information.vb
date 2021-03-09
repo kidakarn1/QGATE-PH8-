@@ -26,7 +26,7 @@ Public Class Information
         LB_Hide_QR_FA_SCAN.Visible = False
         TEXTBOX_COUNTER_PRODUCT.Enabled = False
         TEXTBOX_COUNTER_PRODUCT_NG.Enabled = False
-
+        Button6.Visible = False
         Button2.Visible = False
         count_box = CDbl(Val(api.Load_data("http://192.168.161.102/QGATE/GET_FA_TAG_SCAN/LOAD_DATA_SCAN_BOX?QR_CODE=" & LB_Hide_QR_FA_SCAN.Text))) + 1
         LB_show_user_id.Text = Main.P_user_id
@@ -99,40 +99,66 @@ Public Class Information
                 End If
                 Dim result_check_qr_product = api.Load_data("http://192.168.161.102/QGATE/QGATE_CHECK_FA_TAG_SCAN/CHECK_QR_SCAN_DETAIL?QR_CODE=" & P_SCAN_PRODUCT)
                 If result_check_qr_product = "0" Then
-                    count_product += 1
-                    TEXTBOX_COUNTER_PRODUCT.Text += 1
-                    TEXTBOX_TOTAL_QTY.Text += 1 'TEST'
-                    LB_QR_PRODUCT.Text = P_SCAN_PRODUCT
-                    Dim INSPECTION_TIME = (CDbl(Val(TEST.Text)) / 10)
-                    Dim result_insert = api.Load_data("http://192.168.161.102/QGATE/QGATE_Insert_data/INSERT_QR_SCAN_DETAIL?REF_FA=" & LB_HIDE_ID_REF_FA.Text & "&QR_PROM=" & P_SCAN_PRODUCT & "&USER_ID=" & Main.P_user_id & "&COUNT_QTY=" & TEXTBOX_COUNTER_PRODUCT.Text & "&BOX_NO=" & LB_COUNTBOX.Text & "&INSPECTION_TIME=" & INSPECTION_TIME & "&STATUS=NONG" & "&DEFECT_ID=" & "&RANK_P=" & LB_RANK_PRODUCT.Text)
-                    x = New ListViewItem(CType(P_SCAN_PRODUCT, String))
-                    ListView_Good.Items.Add(x)
-                    Try
-                        LOG_QR_PROD.Add(P_SCAN_PRODUCT)
-                        If LOG_QR_PROD(count_product - 1) <> " " Then
-                            LOG_QR_PROD(count_product - 1) = P_SCAN_PRODUCT
+                    If ListView_Good.Items.Count > 0 Then
+                        Dim x As Integer
+                        For x = 0 To ListView_Good.Items.Count - 1
+                            Try
+                                If ListView_Good.Items(x).Text = SCAN_PRODUCT.Text Then
+                                    GoTo alert_no_scan_product
+                                End If
+                            Catch ex As Exception
+                                MsgBox("ERROR check list view ng")
+                            End Try
+                        Next
+                    End If
+                    If ListView_NG.Items.Count > 0 Then
+                            Dim x As Integer
+                            For x = 0 To ListView_NG.Items.Count - 1
+                                Try
+                                    If ListView_NG.Items(x).Text = SCAN_PRODUCT.Text Then
+                                        GoTo alert_no_scan_product
+                                    End If
+                                Catch ex As Exception
+                                    MsgBox("ERROR check list view ng")
+                                End Try
+                            Next
                         End If
-                    Catch ex As Exception
-                        LOG_QR_PROD.Add(P_SCAN_PRODUCT)
-                    End Try
+                        count_product += 1
+                        TEXTBOX_COUNTER_PRODUCT.Text += 1
+                        TEXTBOX_TOTAL_QTY.Text += 1 'TEST'
+                    LB_QR_PRODUCT.Text = P_SCAN_PRODUCT
+                    Button6.Visible = True
+                    Dim INSPECTION_TIME = (CDbl(Val(TEST.Text)) / 10)
+                        Dim result_insert = api.Load_data("http://192.168.161.102/QGATE/QGATE_Insert_data/INSERT_QR_SCAN_DETAIL?REF_FA=" & LB_HIDE_ID_REF_FA.Text & "&QR_PROM=" & P_SCAN_PRODUCT & "&USER_ID=" & Main.P_user_id & "&COUNT_QTY=" & TEXTBOX_COUNTER_PRODUCT.Text & "&BOX_NO=" & LB_COUNTBOX.Text & "&INSPECTION_TIME=" & INSPECTION_TIME & "&STATUS=NONG" & "&DEFECT_ID=" & "&RANK_P=" & LB_RANK_PRODUCT.Text)
+                        x = New ListViewItem(CType(P_SCAN_PRODUCT, String))
+                        ListView_Good.Items.Add(x)
+                        Try
+                            LOG_QR_PROD.Add(P_SCAN_PRODUCT)
+                            If LOG_QR_PROD(count_product - 1) <> " " Then
+                                LOG_QR_PROD(count_product - 1) = P_SCAN_PRODUCT
+                            End If
+                        Catch ex As Exception
+                            LOG_QR_PROD.Add(P_SCAN_PRODUCT)
+                        End Try
 
-                    time_count = 0
-                    TEST.Text = "0"
-                    If result_insert = "0" Then
-                        MsgBox("INSERT_QR_SCAN_DETAIL  FAILL ")
-                    End If
-                    If count_product = CDbl(Val(LB_SNP.Text)) Then
-                        TEXTBOX_COUNTER_PRODUCT.Text = "0"
-                        'count_product = 0
-                        count_box += 1
-                        LB_COUNTBOX.Text = (LB_COUNTBOX.Text + 1)
-                        SCAN_PRODUCT.Visible = False
-                        Button2.Visible = True
-                        SCAN_PRODUCT.Visible = False
-                        'Start_operation.Show()
-                        'Me.Close()
-                    End If
-                Else
+                        time_count = 0
+                        TEST.Text = "0"
+                        If result_insert = "0" Then
+                            MsgBox("INSERT_QR_SCAN_DETAIL  FAILL ")
+                        End If
+                        If count_product = CDbl(Val(LB_SNP.Text)) Then
+                            TEXTBOX_COUNTER_PRODUCT.Text = "0"
+                            'count_product = 0
+                            count_box += 1
+                            LB_COUNTBOX.Text = (LB_COUNTBOX.Text + 1)
+                            SCAN_PRODUCT.Visible = False
+                            Button2.Visible = True
+                            SCAN_PRODUCT.Visible = False
+                            'Start_operation.Show()
+                            'Me.Close()
+                        End If
+                    Else
+alert_no_scan_product:
                     MsgBox("คุณเคยสแกนชิ้นงานไปแล้ว")
                 End If
                 SCAN_PRODUCT.Text = ""
@@ -180,6 +206,10 @@ alert_ng:
                     Dim dict As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(result_data)
                     For Each item As Object In dict
                         QR_PRODUCT &= item("ID").ToString() & " "
+                        Dim result_update_flg_ng = api.Load_data("http://192.168.161.102/QGATE/QGATE_Insert_data/Update_flg_ok_ng?ID=" & ListView_Good.Items(x).Text)
+                        If result_update_flg_ng = "0" Then
+                            MsgBox("ERROR UPDATE FLG NG_DEFECT")
+                        End If
                     Next
                 Catch ex As Exception
                     MsgBox("ERROR API ID")
@@ -189,6 +219,7 @@ alert_ng:
         End If
 
         Print.Set_parameter_print(LB_PART_NO.Text, LB_PART_NAME.Text, LB_MODEL.Text, LB_LOT.Text, LB_COUNTBOX.Text, LB_SNP.Text, LB_Hide_QR_FA_SCAN.Text, LB_MAXBOX.Text, QR_PRODUCT, Default_count_box, TEXTBOX_COUNTER_PRODUCT.Text)
+        ListView_Good.Clear()
         Dim Start_o = New Start_operation()
         Start_o.Show()
         Me.Close()
@@ -256,14 +287,15 @@ NEXT_NG:
             LOG_QR_PROD = New ArrayList()
             Return
         End If
-        MsgBox("TEST OOOK")
+        ' MsgBox("TEST OOOK")
         If ListView_Good.Items.Count >= 0 And LB_COUNTBOX.Text >= "1" Then
-            MsgBox("TEST DATA")
+            '  MsgBox("TEST DATA")
             If check_index_ng <> "ZERO" Then
-                MsgBox("TEST DATA===>")
+                '  MsgBox("TEST DATA===>")
                 LB_QR_PRODUCT_NG.Text = LOG_QR_PROD(CDbl(Val(ListView_Good.Items.Count - 1)))
                 count_product -= 1
                 Dim result_insert = api.Load_data("http://192.168.161.102/QGATE/QGATE_Insert_data/INSERT_QR_SCAN_DETAIL?REF_FA=" & LB_HIDE_ID_REF_FA.Text & "&QR_PROM=" & LOG_QR_PROD(CDbl(Val(ListView_Good.Items.Count - 1))) & "&USER_ID=" & Main.P_user_id & "&COUNT_QTY=" & TEXTBOX_COUNTER_PRODUCT.Text & "&BOX_NO=" & LB_COUNTBOX.Text & "&INSPECTION_TIME=" & INSPECTION_TIME2 & "&STATUS=NG" & "&DEFECT_ID=" & DEFECT_ID(g_index) & "&RANK_P=")
+                '1921linj MsgBox(result_insert)
                 x = New ListViewItem(CType(LOG_QR_PROD(CDbl(Val(ListView_Good.Items.Count - 1))), String))
                 ListView_NG.Items.Add(x)
                 x = New ListViewItem(CType(LOG_QR_PROD(CDbl(Val(ListView_Good.Items.Count - 1))), String))
@@ -298,7 +330,8 @@ NEXT_NG:
                 Next
                 ListView_NG.Clear()
             End If
-            Print_NG.Set_parameter_print(LB_PART_NO.Text, LB_PART_NAME.Text, LB_MODEL.Text, LB_LOT.Text, LB_BOX_NG.Text, TEXTBOX_COUNTER_PRODUCT_NG.Text, LB_Hide_QR_FA_SCAN.Text, LB_MAXBOX.Text, QR_PRODUCT_NG)
+            Dim result_seq_ng = api.Load_data("http://192.168.161.102/QGATE/GET_FA_TAG_SCAN/GET_SEQ_TAG_NG?ITEM_CD=" & LB_PART_NO.Text & "&LB_LOT=" & LB_LOT.Text)
+            Print_NG.Set_parameter_print(LB_PART_NO.Text, LB_PART_NAME.Text, LB_MODEL.Text, LB_LOT.Text, LB_BOX_NG.Text, TEXTBOX_COUNTER_PRODUCT_NG.Text, LB_Hide_QR_FA_SCAN.Text, LB_MAXBOX.Text, QR_PRODUCT_NG, result_seq_ng)
             next_stock_ng = next_stock_ng + CDbl(Val(LB_SNP.Text))
             ListView_NG.Clear()
         End If
@@ -410,12 +443,16 @@ NEXT_NG:
                     Dim dict As Object = New JavaScriptSerializer().Deserialize(Of List(Of Object))(result_data)
                     For Each item As Object In dict
                         QR_PRODUCT &= item("ID").ToString() & " "
+                        Dim result_update_flg_ng = api.Load_data("http://192.168.161.102/QGATE/QGATE_Insert_data/Update_flg_ok_ng?ID=" & ListView_Good.Items(x).Text)
+                        If result_update_flg_ng = "0" Then
+                            MsgBox("ERROR UPDATE FLG NG_DEFECT")
+                        End If
                     Next
                 Catch ex As Exception
                     MsgBox("ERROR API ID")
                 End Try
             Next
-            ListView_Good.Clear()
+
         End If
         If ListView_NG.Items.Count > 0 Then
             Dim x As Integer
@@ -432,14 +469,25 @@ NEXT_NG:
             Next
             ListView_NG.Clear()
         End If
-        Print.Set_parameter_print(LB_PART_NO.Text, LB_PART_NAME.Text, LB_MODEL.Text, LB_LOT.Text, LB_COUNTBOX.Text, LB_SNP.Text, LB_Hide_QR_FA_SCAN.Text, LB_MAXBOX.Text, QR_PRODUCT, Default_count_box, TEXTBOX_COUNTER_PRODUCT.Text)
-        If TEXTBOX_COUNTER_PRODUCT_NG.Text <> "0" Then
-            Print_NG.Set_parameter_print(LB_PART_NO.Text, LB_PART_NAME.Text, LB_MODEL.Text, LB_LOT.Text, LB_BOX_NG.Text, TEXTBOX_COUNTER_PRODUCT_NG.Text, LB_Hide_QR_FA_SCAN.Text, LB_MAXBOX.Text, QR_PRODUCT_NG)
-            ListView_NG.Clear()
-        End If
-        Dim Start_o = New Start_operation()
-        Start_o.Show()
-        Me.Close()
+        Try
+            If ListView_Good.Items.Count > 0 Then
+                Print.Set_parameter_print(LB_PART_NO.Text, LB_PART_NAME.Text, LB_MODEL.Text, LB_LOT.Text, LB_COUNTBOX.Text, LB_SNP.Text, LB_Hide_QR_FA_SCAN.Text, LB_MAXBOX.Text, QR_PRODUCT, Default_count_box, TEXTBOX_COUNTER_PRODUCT.Text)
+                ListView_Good.Clear()
+            End If
+            If TEXTBOX_COUNTER_PRODUCT_NG.Text <> "0" Then
+                Dim result_seq_ng = api.Load_data("http://192.168.161.102/QGATE/GET_FA_TAG_SCAN/GET_SEQ_TAG_NG?ITEM_CD=" & LB_PART_NO.Text & "&LOT_NO=" & LB_LOT.Text)
+                'MsgBox(result_seq_ng - 1)
+                Print_NG.Set_parameter_print(LB_PART_NO.Text, LB_PART_NAME.Text, LB_MODEL.Text, LB_LOT.Text, LB_BOX_NG.Text, TEXTBOX_COUNTER_PRODUCT_NG.Text, LB_Hide_QR_FA_SCAN.Text, LB_MAXBOX.Text, QR_PRODUCT_NG, result_seq_ng)
+                Dim insert_tag_ng = api.Load_data("http://192.168.161.102/QGATE/QGATE_Insert_data/Insert_tag_ng?ITEM_CD=" & LB_PART_NO.Text & "&LOT_NO=" & LB_LOT.Text & "&SEQ=" & CDbl(Val(result_seq_ng)) - 1 & "&CREATED_BY=" & Main.P_user_id)
+                ListView_NG.Clear()
+            End If
+            Dim Start_o = New Start_operation()
+            Start_o.Show()
+            Me.Close()
+        Catch ex As Exception
+            MsgBox("SORRY PROGAME ERROR")
+        End Try
+
     End Sub
 
     Private Sub ListView_Good_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView_Good.SelectedIndexChanged

@@ -794,9 +794,9 @@ Partial Class Information
         'ListView_Good
         '
         Me.ListView_Good.HideSelection = False
-        Me.ListView_Good.Location = New System.Drawing.Point(1099, 8)
+        Me.ListView_Good.Location = New System.Drawing.Point(483, 8)
         Me.ListView_Good.Name = "ListView_Good"
-        Me.ListView_Good.Size = New System.Drawing.Size(58, 20)
+        Me.ListView_Good.Size = New System.Drawing.Size(144, 79)
         Me.ListView_Good.TabIndex = 47
         Me.ListView_Good.UseCompatibleStateImageBehavior = False
         '
